@@ -1,4 +1,4 @@
-# Zendesk Olympic Event API (Laravel 5)
+#  Olympic Event API (Laravel 5)
 
 Getting started:
 
