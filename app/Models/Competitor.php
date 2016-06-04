@@ -23,5 +23,13 @@ class Competitor extends Model
      * @var array
      */
     protected $hidden = [
-    ];    
+    ];
+
+    public function toArray()
+    {
+        return array(
+            'id'   => $this->id,
+            'name' => $this->name,
+        );
+    }
 }

@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user/profile', [
-    'as'   => 'profile',
-    'uses' => 'UserController@showProfile'
+Route::get('/events', [
+    'as'   => 'events',
+    'uses' => 'EventController@getEvents'
 ]);

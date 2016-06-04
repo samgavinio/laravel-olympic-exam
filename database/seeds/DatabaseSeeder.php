@@ -12,7 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(EventTypesTableSeeder::class);
+        $this->call(CompetitorsTableSeeder::class);
+        $this->call(EventsTableSeeder::class);
 
         $this->command->info('EventTypes table has been seeded!');
+        $this->command->info('Competitors table has been seeded!');
+        $this->command->info('Events table has been seeded!');
     }
 }

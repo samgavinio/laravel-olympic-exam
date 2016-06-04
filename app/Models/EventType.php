@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class EventType extends Model
 {
+    const EVENT_TYPE_BASKETBALL = 1;
+
+    const EVENT_TYPE_BASEBALL = 2;
+    
+    const EVENT_TYPE_FOOTBALL = 3;
+    
     protected $table = 'event_types';
     
     /**

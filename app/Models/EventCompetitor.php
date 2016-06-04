@@ -23,5 +23,22 @@ class EventCompetitor extends Model
      * @var array
      */
     protected $hidden = [
-    ];    
+    ];
+
+    public function competitor()
+    {
+        return $this->hasOne('App\Models\Competitor', 'id', 'competitor_id');
+    }
+
+    public function toArray()
+    {
+        $competitor = $this->competitor()->first();
+        
+        return array(
+            'id'              => $this->id,
+            'score'           => $this->score,
+            'is_winning_team' => $this->is_winning_team,
+            'competitor'      => $competitor,
+        );
+    }
 }
